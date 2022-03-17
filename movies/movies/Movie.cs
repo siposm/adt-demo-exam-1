@@ -16,6 +16,8 @@ namespace movies
         [MaxLength(80)] 
         public string Title { get; set; }
         public string Genre { get; set; }
+        
+        [MinimumYear(1888)]
         public int YearOfRelease { get; set; }
 
         public override string ToString()
