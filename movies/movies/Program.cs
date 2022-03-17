@@ -6,7 +6,17 @@ namespace movies
     {
         static void Main(string[] args)
         {
-            // Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Movies.mdf;Integrated Security=True
+            MovieContext context = new MovieContext();
+            context.Movies.Add(new Movie()
+            {
+                Title = "AAA111",
+                Genre = "Horror",
+                YearOfRelease = 2022
+            });
+            context.SaveChanges();
+
+            foreach (var movie in context.Movies)
+                Console.WriteLine(movie);
         }
     }
 }
