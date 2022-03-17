@@ -6,17 +6,15 @@ namespace movies
     {
         static void Main(string[] args)
         {
-            MovieContext context = new MovieContext();
-            context.Movies.Add(new Movie()
-            {
-                Title = "AAA111",
-                Genre = "Horror",
-                YearOfRelease = 2022
-            });
-            context.SaveChanges();
+            MovieContext db = new MovieContext();
 
-            foreach (var movie in context.Movies)
-                Console.WriteLine(movie);
+            foreach (var movie in MovieCreator.CreateMovies())
+                db.Movies.Add(movie);
+
+            db.SaveChanges();
+
+            foreach (var movie in db.Movies)
+                Console.WriteLine("\t> " + movie);
         }
     }
 }
