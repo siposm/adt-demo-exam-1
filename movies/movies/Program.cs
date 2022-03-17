@@ -15,6 +15,14 @@ namespace movies
 
             foreach (var movie in db.Movies)
                 Console.WriteLine("\t> " + movie);
+
+            // =============================================================================
+
+            foreach (var movie in db.Movies)
+            {
+                bool result = Validator.IsValid<Movie>("YearOfRelease", movie);
+                Console.WriteLine(result);
+            }
         }
     }
 }
