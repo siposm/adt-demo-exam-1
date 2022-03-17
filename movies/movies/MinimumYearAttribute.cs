@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace movies
 {
-    internal class MinimumYearAttribute
+    [AttributeUsage(AttributeTargets.Property)]
+    public class MinimumYearAttribute : Attribute
     {
+        public int MinimumYear { get; set; }
+        public MinimumYearAttribute(int MinimumYear)
+        {
+            this.MinimumYear = MinimumYear;
+        }
     }
 }
