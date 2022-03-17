@@ -28,7 +28,7 @@ namespace movies
                 return movies;
             };
 
-            return func("https://users.nik.uni-obuda.hu/siposm/db/Movies.xml");
+            return func("https://users.nik.uni-obuda.hu/siposm/db/movies.xml");
         }
     }
 }
