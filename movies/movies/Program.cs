@@ -41,7 +41,7 @@ namespace movies
                      orderby x.Title.Length descending
                      select x;
 
-            var q3 = from x in db.Movies.ToList() // to list needed unfortunately
+            var q3 = from x in db.Movies.ToList() // to list needed unfortunately due to EFCore limitations
                      group x by x.Genre into g
                         let longestTitleLength = g.Max(m => m.Title.Length)
                      select new
@@ -50,8 +50,6 @@ namespace movies
                          Title = g.First(y => y.Title.Length == longestTitleLength).Title,
                          YearOfRelease = g.First(y => y.Title.Length == longestTitleLength).YearOfRelease,
                      };
-
-            ;
 
         }
     }
