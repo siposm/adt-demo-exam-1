@@ -17,7 +17,7 @@ namespace movies
         public string Title { get; set; }
         public string Genre { get; set; }
         
-        [MinimumYear(1888)]
+        [MinimumYear(1993)]
         public int YearOfRelease { get; set; }
 
         public override string ToString()
