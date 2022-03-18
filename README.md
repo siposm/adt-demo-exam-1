@@ -1,8 +1,8 @@
 # Advanced Development Techniques Demo Exam #1
 
 ```
-Sipos Miklos
-2022
+    Sipos Miklos
+    2022
 ```
 
 Create a **single-layer** console application based on the following tasks.
@@ -15,6 +15,7 @@ Create a **single-layer** console application based on the following tasks.
         - `Title (string)` – Title of the movie. Max 80 chars, required field;
         - `Genre (string)` – Genre of the movie;
         - `YearOfRelease (int)` – Year the movie was released.
+        - *Note, that the xml contains additional properties as well, which for this moment we'll ignore.*
 
 ## XML processing
 - Create a static class named `MovieCreator` and inside a method named `CreateMovies` that can create `Movie` objects from the `movies.xml` file (https://users.nik.uni-obuda.hu/siposm/db/movies.xml). In the method create a `Func` delegate which accepts a `string` typed path of the file and returns an `IEnumerable<Movie>` referenced collection.
