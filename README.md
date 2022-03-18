@@ -1,7 +1,8 @@
 # Advanced Development Techniques Demo Exam #1
 
 ```
-    Sipos Miklos
+    Sipos Miklos    
+    © siposm
     2022
 ```
 
